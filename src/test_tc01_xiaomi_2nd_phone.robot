@@ -33,7 +33,7 @@ ${PRICE}         ${EMPTY}
 
 *** Test Cases ***
 Get Name and Price of 2nd Xiaomi mobile phone
-    [Tags]    DEBUG
+    [Tags]    UAT    Ready
     Given I Find 2nd "${PHONE_NAME}" mobile phone
     Then I Save "${NAME}" and "${PRICE}" of the phone
 

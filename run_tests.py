@@ -6,7 +6,8 @@ from robot import run
 
 def run_robot():
     tests_path = 'src'
-    run(tests_path)
+    output_path = './reports'
+    run(tests_path, output_path)
 
 
 def main():
