@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.6.8 on linux)" generated="20190627 21:34:49.734" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.6.8 on linux)" generated="20190628 07:35:59.734" rpa="false">
 <suite id="s1" name="Src" source="/home/radek/Projects/tesena_test/src">
 <suite id="s1-s1" name="Test Tc01 Xiaomi 2Nd Phone" source="/home/radek/Projects/tesena_test/src/test_tc01_xiaomi_2nd_phone.robot">
 <test id="s1-s1-t1" name="Get Name and Price of 2nd Xiaomi mobile phone">
@@ -9,35 +9,35 @@
 <arg>${HOMEPAGE}</arg>
 <arg>${BROwSER}</arg>
 </arguments>
-<msg timestamp="20190627 21:34:49.869" level="INFO">Opening browser 'chrome' to base url 'https://www.alza.cz/'.</msg>
-<status status="PASS" starttime="20190627 21:34:49.869" endtime="20190627 21:34:53.638"></status>
+<msg timestamp="20190628 07:35:59.867" level="INFO">Opening browser 'chrome' to base url 'https://www.alza.cz/'.</msg>
+<status status="PASS" starttime="20190628 07:35:59.866" endtime="20190628 07:36:03.612"></status>
 </kw>
 <kw name="Given I Find 2nd &quot;Xiaomi&quot; mobile phone">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20190627 21:34:53.640" endtime="20190627 21:34:53.764"></status>
+<status status="PASS" starttime="20190628 07:36:03.615" endtime="20190628 07:36:03.759"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${LOC_SEARCH_INPUT}</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:34:53.765" endtime="20190627 21:34:53.838"></status>
+<status status="PASS" starttime="20190628 07:36:03.759" endtime="20190628 07:36:03.830"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${LOC_SEARCH_BTTN}</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:34:53.838" endtime="20190627 21:34:53.872"></status>
+<status status="PASS" starttime="20190628 07:36:03.830" endtime="20190628 07:36:03.868"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${LOC_SEARCH_INPUT}</arg>
 </arguments>
-<msg timestamp="20190627 21:34:53.872" level="INFO">Clicking element '//*[@id="edtSearch"]'.</msg>
-<status status="PASS" starttime="20190627 21:34:53.872" endtime="20190627 21:34:53.953"></status>
+<msg timestamp="20190628 07:36:03.869" level="INFO">Clicking element '//*[@id="edtSearch"]'.</msg>
+<status status="PASS" starttime="20190628 07:36:03.868" endtime="20190628 07:36:03.986"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -45,23 +45,23 @@
 <arg>${LOC_SEARCH_INPUT}</arg>
 <arg>${SEARCH_PHRASE}</arg>
 </arguments>
-<msg timestamp="20190627 21:34:53.954" level="INFO">Typing text 'Mobilní telefony Xiaomi' into text field '//*[@id="edtSearch"]'.</msg>
-<status status="PASS" starttime="20190627 21:34:53.954" endtime="20190627 21:34:54.538"></status>
+<msg timestamp="20190628 07:36:03.987" level="INFO">Typing text 'Mobilní telefony Xiaomi' into text field '//*[@id="edtSearch"]'.</msg>
+<status status="PASS" starttime="20190628 07:36:03.986" endtime="20190628 07:36:04.792"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${LOC_SEARCH_BTTN}</arg>
 </arguments>
-<msg timestamp="20190627 21:34:54.538" level="INFO">Clicking element '//*[@id="btnSearch"]'.</msg>
-<status status="PASS" starttime="20190627 21:34:54.538" endtime="20190627 21:34:59.426"></status>
+<msg timestamp="20190628 07:36:04.792" level="INFO">Clicking element '//*[@id="btnSearch"]'.</msg>
+<status status="PASS" starttime="20190628 07:36:04.792" endtime="20190628 07:36:09.564"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${LOC_RESULTS_BOXES}</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:34:59.427" endtime="20190627 21:34:59.538"></status>
+<status status="PASS" starttime="20190628 07:36:09.564" endtime="20190628 07:36:09.670"></status>
 </kw>
 <kw name="Get WebElements" library="SeleniumLibrary">
 <doc>Returns list of WebElement objects matching the ``locator``.</doc>
@@ -71,26 +71,26 @@
 <assign>
 <var>@{boxes_images}</var>
 </assign>
-<msg timestamp="20190627 21:34:59.617" level="INFO">@{boxes_images} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="db6e7f7e0c202c4d24982c9f8dd13a4e", element="f145d409-c0fa-49b0-a8cf-6f0b78672382")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20190627 21:34:59.539" endtime="20190627 21:34:59.617"></status>
+<msg timestamp="20190628 07:36:09.698" level="INFO">@{boxes_images} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="1fa79c5ac0a63caaffa630cc2d20007e", element="9a9fbabd-2697-42c5-acc0-1b860f7ef35a")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20190628 07:36:09.670" endtime="20190628 07:36:09.698"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls an element identified by ``locator`` into view.</doc>
 <arguments>
-<arg>${boxes_images}[1]</arg>
+<arg>@{boxes_images}[1]</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:34:59.617" endtime="20190627 21:34:59.902"></status>
+<status status="PASS" starttime="20190628 07:36:09.698" endtime="20190628 07:36:09.978"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${BOX_IMAGE}</arg>
-<arg>${boxes_images}[1]</arg>
+<arg>@{boxes_images}[1]</arg>
 </arguments>
-<msg timestamp="20190627 21:34:59.906" level="INFO">${BOX_IMAGE} = &lt;selenium.webdriver.remote.webelement.WebElement (session="db6e7f7e0c202c4d24982c9f8dd13a4e", element="be53ccaa-75e2-49e5-86a5-3ec81a41acd1")&gt;</msg>
-<status status="PASS" starttime="20190627 21:34:59.903" endtime="20190627 21:34:59.907"></status>
+<msg timestamp="20190628 07:36:09.982" level="INFO">${BOX_IMAGE} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1fa79c5ac0a63caaffa630cc2d20007e", element="4d7e620a-9199-40aa-bbf7-d44501b8e8f7")&gt;</msg>
+<status status="PASS" starttime="20190628 07:36:09.979" endtime="20190628 07:36:09.982"></status>
 </kw>
-<status status="PASS" starttime="20190627 21:34:53.639" endtime="20190627 21:34:59.907"></status>
+<status status="PASS" starttime="20190628 07:36:03.613" endtime="20190628 07:36:09.982"></status>
 </kw>
 <kw name="Then I Save &quot;Name&quot; and &quot;Price&quot; of the phone">
 <kw name="Set Focus To Element" library="SeleniumLibrary">
@@ -98,29 +98,29 @@
 <arguments>
 <arg>${BOX_IMAGE}</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:34:59.908" endtime="20190627 21:34:59.923"></status>
+<status status="PASS" starttime="20190628 07:36:09.984" endtime="20190628 07:36:09.996"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${BOX_IMAGE}</arg>
 </arguments>
-<msg timestamp="20190627 21:34:59.924" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="db6e7f7e0c202c4d24982c9f8dd13a4e", element="be53ccaa-75e2-49e5-86a5-3ec81a41acd1")&gt;'.</msg>
-<status status="PASS" starttime="20190627 21:34:59.923" endtime="20190627 21:35:05.399"></status>
+<msg timestamp="20190628 07:36:09.997" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1fa79c5ac0a63caaffa630cc2d20007e", element="4d7e620a-9199-40aa-bbf7-d44501b8e8f7")&gt;'.</msg>
+<status status="PASS" starttime="20190628 07:36:09.996" endtime="20190628 07:36:16.448"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${LOC_PHONE_NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:35:05.400" endtime="20190627 21:35:05.456"></status>
+<status status="PASS" starttime="20190628 07:36:16.449" endtime="20190628 07:36:16.521"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${LOC_PHONE_PRICE}</arg>
 </arguments>
-<status status="PASS" starttime="20190627 21:35:05.456" endtime="20190627 21:35:05.490"></status>
+<status status="PASS" starttime="20190628 07:36:16.521" endtime="20190628 07:36:16.561"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of element identified by ``locator``.</doc>
@@ -130,8 +130,8 @@
 <assign>
 <var>${NAME}</var>
 </assign>
-<msg timestamp="20190627 21:35:05.518" level="INFO">${NAME} = Xiaomi Redmi Note 7 LTE 128GB černá</msg>
-<status status="PASS" starttime="20190627 21:35:05.490" endtime="20190627 21:35:05.518"></status>
+<msg timestamp="20190628 07:36:16.586" level="INFO">${NAME} = Xiaomi Redmi Note 7 LTE 128GB černá</msg>
+<status status="PASS" starttime="20190628 07:36:16.561" endtime="20190628 07:36:16.586"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of element identified by ``locator``.</doc>
@@ -141,36 +141,36 @@
 <assign>
 <var>${PRICE}</var>
 </assign>
-<msg timestamp="20190627 21:35:05.547" level="INFO">${PRICE} = 6 399,-</msg>
-<status status="PASS" starttime="20190627 21:35:05.519" endtime="20190627 21:35:05.547"></status>
+<msg timestamp="20190628 07:36:16.611" level="INFO">${PRICE} = 6 399,-</msg>
+<status status="PASS" starttime="20190628 07:36:16.586" endtime="20190628 07:36:16.611"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${NAME}: ${PRICE}</arg>
 </arguments>
-<msg timestamp="20190627 21:35:05.547" level="INFO">Xiaomi Redmi Note 7 LTE 128GB černá: 6 399,-</msg>
-<status status="PASS" starttime="20190627 21:35:05.547" endtime="20190627 21:35:05.547"></status>
+<msg timestamp="20190628 07:36:16.612" level="INFO">Xiaomi Redmi Note 7 LTE 128GB černá: 6 399,-</msg>
+<status status="PASS" starttime="20190628 07:36:16.611" endtime="20190628 07:36:16.612"></status>
 </kw>
-<status status="PASS" starttime="20190627 21:34:59.908" endtime="20190627 21:35:05.547"></status>
+<status status="PASS" starttime="20190628 07:36:09.983" endtime="20190628 07:36:16.612"></status>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20190627 21:35:05.548" endtime="20190627 21:35:05.634"></status>
+<status status="PASS" starttime="20190628 07:36:16.612" endtime="20190628 07:36:16.698"></status>
 </kw>
 <tags>
 <tag>Ready</tag>
 <tag>UAT</tag>
 </tags>
-<status status="PASS" starttime="20190627 21:34:49.868" endtime="20190627 21:35:05.634" critical="yes"></status>
+<status status="PASS" starttime="20190628 07:35:59.866" endtime="20190628 07:36:16.698" critical="yes"></status>
 </test>
 <doc>As a user, I will visit Alza.cz eshop,
 find Xiaomi mobile phones products
 display details of the 2nd found product
 and save product name and price as two variables.</doc>
-<status status="PASS" starttime="20190627 21:34:49.753" endtime="20190627 21:35:05.635"></status>
+<status status="PASS" starttime="20190628 07:35:59.753" endtime="20190628 07:36:16.705"></status>
 </suite>
-<status status="PASS" starttime="20190627 21:34:49.734" endtime="20190627 21:35:05.638"></status>
+<status status="PASS" starttime="20190628 07:35:59.735" endtime="20190628 07:36:16.707"></status>
 </suite>
 <statistics>
 <total>

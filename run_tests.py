@@ -1,5 +1,3 @@
-#!usr/bin/python3
-
 from robot import run
 
 

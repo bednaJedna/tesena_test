@@ -49,8 +49,8 @@ Given I Find 2nd "Xiaomi" mobile phone
 
     @{boxes_images}=    Get WebElements     ${LOC_BOX_IMAGE}
 
-    Scroll Element Into View                ${boxes_images}[1]
-    Set Global Variable                     ${BOX_IMAGE}    ${boxes_images}[1]
+    Scroll Element Into View                @{boxes_images}[1]
+    Set Global Variable                     ${BOX_IMAGE}    @{boxes_images}[1]
 
 Then I Save "Name" and "Price" of the phone
     Set Focus To Element                    ${BOX_IMAGE}
