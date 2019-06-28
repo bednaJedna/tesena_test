@@ -14,6 +14,6 @@ Basic scripting test in Robot Framework
 - run "python3 run_tests.py"
 - reports are stored in "./reports" directory
 
-##Written on LINUX, should work on Win as well"
+## Written on LINUX, should work on Win as well"
 
 ###### PS: much cooler would be to use headless chrome, but it is messing with locators :()

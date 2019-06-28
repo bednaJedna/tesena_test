@@ -14,10 +14,10 @@ ${HOMEPAGE}                  https://www.alza.cz/
 
 ${BROWSER}                   chrome    # do not use headless, it is messing with image locators, wrong phone is picked
 ${PHONE_NAME}                Xiaomi
+${SEARCH_PHRASE}             Mobilní telefony ${PHONE_NAME}
 
 ${LOC_SEARCH_INPUT}          //*[@id="edtSearch"]
 ${LOC_SEARCH_BTTN}           //*[@id="btnSearch"]
-${SEARCH_PHRASE}             Mobilní telefony ${PHONE_NAME}
 
 ${LOC_RESULTS_BOXES}         //*[@id="boxes"]
 ${LOC_BOX_IMAGE}             //div[@class='bi js-block-image']
@@ -39,28 +39,28 @@ Get Name and Price of 2nd Xiaomi mobile phone
 *** Keywords ***
 Given I Find 2nd "Xiaomi" mobile phone
     Maximize Browser Window
-    Wait Until Element is Visible    ${LOC_SEARCH_INPUT}
-    Wait Until Element is Visible    ${LOC_SEARCH_BTTN}
+    Wait Until Element is Visible           ${LOC_SEARCH_INPUT}
+    Wait Until Element is Visible           ${LOC_SEARCH_BTTN}
 
-    Click Element                    ${LOC_SEARCH_INPUT}
-    Input Text                       ${LOC_SEARCH_INPUT}    ${SEARCH_PHRASE}
-    Click Element                    ${LOC_SEARCH_BTTN}
-    Wait Until Element is Visible    ${LOC_RESULTS_BOXES}
+    Click Element                           ${LOC_SEARCH_INPUT}
+    Input Text                              ${LOC_SEARCH_INPUT}    ${SEARCH_PHRASE}
+    Click Element                           ${LOC_SEARCH_BTTN}
+    Wait Until Element is Visible           ${LOC_RESULTS_BOXES}
 
     @{boxes_images}=    Get WebElements     ${LOC_BOX_IMAGE}
 
-    Scroll Element Into View         ${boxes_images}[1]
-    Set Global Variable              ${BOX_IMAGE}    ${boxes_images}[1]
+    Scroll Element Into View                ${boxes_images}[1]
+    Set Global Variable                     ${BOX_IMAGE}    ${boxes_images}[1]
 
 Then I Save "Name" and "Price" of the phone
-    Set Focus To Element             ${BOX_IMAGE}
-    Click Element                    ${BOX_IMAGE}
+    Set Focus To Element                    ${BOX_IMAGE}
+    Click Element                           ${BOX_IMAGE}
 
-    Wait Until Element is Visible    ${LOC_PHONE_NAME}
-    Wait Until Element is Visible    ${LOC_PHONE_PRICE}
+    Wait Until Element is Visible           ${LOC_PHONE_NAME}
+    Wait Until Element is Visible           ${LOC_PHONE_PRICE}
 
-    ${NAME}=     Get Text            ${LOC_PHONE_NAME}
-    ${PRICE}=    Get Text            ${LOC_PHONE_PRICE}
+    ${NAME}=     Get Text                   ${LOC_PHONE_NAME}
+    ${PRICE}=    Get Text                   ${LOC_PHONE_PRICE}
 
-    Log                              ${NAME}: ${PRICE}    # if value was needed for futher use,
-                                                          # &nbsp character should stripped
+    Log                                     ${NAME}: ${PRICE}    # if price was needed for futher use,
+                                                                 # &nbsp character should be stripped
