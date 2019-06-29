@@ -8,7 +8,7 @@ Basic scripting test in Robot Framework
 - saves two variables (one for the product name; second for product price)
 
 ### How to use:
-- have Python with robotframework installed
+- have Python with robotframework, robotframework-seleniumLibrary installed
 - have chromedriver saved and added to PATH
 - open shell, get into "tesena_test" directory
 - run "python3 run_tests.py"

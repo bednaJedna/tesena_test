@@ -6,29 +6,25 @@ Documentation    As a user, I will visit Alza.cz eshop,
 
 Library          SeleniumLibrary
 
-Test Setup       Open Browser    ${HOMEPAGE}    ${BROwSER}
+Test Setup       Open Browser    ${HOMEPAGE}    ${BROWSER}
 Test Teardown    Close All Browsers
 
 *** Variables ***
 ${HOMEPAGE}                  https://www.alza.cz/
-
 ${BROWSER}                   chrome    # do not use headless, it is messing with image locators, wrong phone is picked
+
 ${PHONE_NAME}                Xiaomi
 ${SEARCH_PHRASE}             Mobilní telefony ${PHONE_NAME}
 
 ${LOC_SEARCH_INPUT}          //*[@id="edtSearch"]
 ${LOC_SEARCH_BTTN}           //*[@id="btnSearch"]
-
 ${LOC_RESULTS_BOXES}         //*[@id="boxes"]
 ${LOC_BOX_IMAGE}             //div[@class='bi js-block-image']
 ${LOC_PHONE_NAME}            //h1[@itemprop='name']
 ${LOC_PHONE_PRICE}           //span[@class='bigPrice price_withVat']
-${LOC_CHATBOT_CLOSE_BTTN}    //div[@class='vendor-close fa fa-times']
-
 
 ${NAME}                      ${EMPTY}
 ${PRICE}                     ${EMPTY}
-
 
 *** Test Cases ***
 Get Name and Price of 2nd Xiaomi mobile phone
