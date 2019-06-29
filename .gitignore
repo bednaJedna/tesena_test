@@ -106,3 +106,4 @@ venv.bak/
 # Own
 .idea
 *.png
+/reports/*
