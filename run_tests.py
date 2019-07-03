@@ -1,4 +1,5 @@
 from robot import run
+import chromedriver_binary
 
 
 def run_robot():
